@@ -4,5 +4,12 @@
 
 // window.sayHello('Muawaz')
 
-console.log(module);
+// var logger = require('./logger')
+// logger = 1 
+// logger.log('message') // error
+
+
+const log = require('./logger')
+// logger.log('message')
+log('message')
 
