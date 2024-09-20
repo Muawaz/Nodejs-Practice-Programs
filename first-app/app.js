@@ -1,17 +1,8 @@
-function sayHello(name) {
-    console.log('Hello ' + name);
-}
+// var sayHello = function(name) {
+//     console.log('Hello ' + name);
+// }
 
-sayHello('Muawaz')
+// window.sayHello('Muawaz')
 
-// setTimeout(); // window.setTimeout();
-// clearTimeout(); // window.clearTimeout();
+console.log(module);
 
-// setInterval();
-// clearInterval();
-
-// global.setInterval();
-// global.clearInterval()
-
-var message = '';
-console.log(global.message); // undefined
