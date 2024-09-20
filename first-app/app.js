@@ -1,15 +1,5 @@
-// var sayHello = function(name) {
-//     console.log('Hello ' + name);
-// }
+const path = require('path')
 
-// window.sayHello('Muawaz')
+const pathObj = path.parse(__filename)
 
-// var logger = require('./logger')
-// logger = 1 
-// logger.log('message') // error
-
-
-const log = require('./logger')
-// logger.log('message')
-log('message')
-
+console.log(pathObj);
