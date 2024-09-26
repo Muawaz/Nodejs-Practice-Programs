@@ -1,5 +1,5 @@
 {
-  "name": "npm-demo",
+  "name": "app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "underscore": "^1.13.7"
-  },
-  "devDependencies": {
-    "jshint": "^2.13.6"
+    "lion-lib-09000": "^1.0.0"
   }
 }

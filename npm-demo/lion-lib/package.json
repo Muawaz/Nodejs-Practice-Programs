@@ -1,5 +1,5 @@
 {
-  "name": "npm-demo",
+  "name": "lion-lib-09000",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,11 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "underscore": "^1.13.7"
-  },
-  "devDependencies": {
-    "jshint": "^2.13.6"
-  }
+  "description": ""
 }
