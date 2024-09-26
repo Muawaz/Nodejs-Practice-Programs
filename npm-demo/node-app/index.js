@@ -1,5 +1,8 @@
 
 const lion = require('lion-lib-09000');
-const result = lion.add(2, 4);
+let result = lion.add(2, 4);
 
-console.log("result : ", result);
+console.log("add result : ", result);
+
+result = lion.multiply(2, 4)
+console.log("multiply result : ", result);
