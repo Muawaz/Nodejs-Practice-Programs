@@ -10,4 +10,8 @@ app.get('/api/courses', (req, res) => {
     res.send([1, 2, 3, 4, 5, 6]);
 });
 
-app.listen(3000, () => console.log(`listening on http://localhost:3000`));
+// PORT
+const port = process.env.PORT || 3000;
+// Windows PowerShell : $env:PORT=5000
+
+app.listen(3000, () => console.log(`listening on http://localhost:${port}`));
