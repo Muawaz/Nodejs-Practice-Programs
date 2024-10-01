@@ -46,6 +46,13 @@ app.post('/api/courses', (req, res) => {
     res.send(course);
 });
 
+
+app.put('/api/course/:id', (req, res) => {
+    const course = courses.find(c => c.id === parseInt(req.params.id))
+    if (!course) res.status(404).send('The course with the given not found')
+
+});
+
 // PORT
 const port = process.env.PORT || 3000;
 // Windows PowerShell : $env:PORT=5000
