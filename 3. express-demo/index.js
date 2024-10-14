@@ -1,3 +1,4 @@
+const debug = require('debug')('app:startup')
 const config = require('config')
 const helmet = require('helmet')
 const morgan = require('morgan')
@@ -20,8 +21,10 @@ console.log('Mail Password : ' + config.get('mail.password'));
 
 if (app.get('env') === 'development') {
     app.use(morgan('tiny'));
-    console.log('Morgan Enabled');
+    // console.log('Morgan Enabled');
     // Windows PowerShell : $env:NODE_ENV="production"
+    debug('Morgan Enabled');
+    // Windows PowerShell : $env:DEBUG="app:startup"
 }
 
 app.use(logger);
