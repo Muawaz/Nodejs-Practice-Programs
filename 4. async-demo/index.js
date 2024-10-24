@@ -7,26 +7,30 @@ console.log('Before')
 //     })
 // });
 
-getUser(1)
-    .then(user => getRepositories(user.gitHubUsername))
-    .then(repos => getCommits(repos[0]))
-    .then(commit => console.log(commit))
-    .catch(err => console.log('Error : ', err.message))
+// Promise-based Approach
+// getUser(1)
+//     .then(user => getRepositories(user.gitHubUsername))
+//     .then(repos => getCommits(repos[0]))
+//     .then(commit => console.log(commit))
+//     .catch(err => console.log('Error : ', err.message))
 
+
+// Async-Await Approach
+async function displayCommits() {
+    try {
+        const user = await getUser(1);
+        const repos = await getRepositories(user.gitHubUsername);
+        const commits = await getCommits(repos[0]);
+        console.log(commits);
+    }
+    catch (err) {
+        console.log('Error : ', err.message);
+    }
+}
+
+displayCommits();
 
 console.log('After')
-
-// function displayCommits(commits) {
-//     console.log(commits);
-// }
-
-// function getCommits(repos) {
-//     getCommits(repos, displayCommits)
-// }
-
-// function getRepositories(user) {
-//     getRepositories(user.gitHubUsername, getCommits)
-// }
 
 function getUser(id) {
     return new Promise((resolve, reject) => {
@@ -42,7 +46,8 @@ function getRepositories(username) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('Calling github API...')
-            resolve(['repo1', 'repo2', 'repo3']);
+            // resolve(['repo1', 'repo2', 'repo3']);
+            reject(new Error('Could not get the repos.'))
         }, 2000);
     })
 }
